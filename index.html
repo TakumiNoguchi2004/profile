@@ -74,7 +74,6 @@
       width: 120px;
       height: 120px;
       flex-shrink: 0;
-
       object-fit: contain;
       border-radius: 20px;
     }
@@ -88,7 +87,6 @@
     h1 span {
       display: block;
       margin-top: 3px;
-
       font-size: 1.1rem;
       font-weight: normal;
       color: var(--subtext);
@@ -97,10 +95,8 @@
     h2 {
       margin-top: 40px;
       margin-bottom: 18px;
-
       padding-bottom: 6px;
       border-bottom: 1px solid var(--border);
-
       font-size: 1.25rem;
     }
 
@@ -193,9 +189,7 @@
     footer {
       margin-top: 52px;
       padding-top: 18px;
-
       border-top: 1px solid var(--border);
-
       color: var(--subtext);
       font-size: 0.9rem;
     }
@@ -244,10 +238,18 @@
     "alternateName": "野口 拓海",
     "url": "https://takumi-noguchi.dev/",
     "image": "https://takumi-noguchi.dev/images/usagi_icon.png",
-    "affiliation": {
-      "@type": "CollegeOrUniversity",
-      "name": "Keio University"
-    },
+    "affiliation": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Keio University",
+        "url": "https://www.keio.ac.jp/"
+      },
+      {
+        "@type": "Organization",
+        "name": "Sugiura Laboratory (smilab)",
+        "url": "https://smilab.org/"
+      }
+    ],
     "knowsAbout": [
       "LLM-as-a-Judge",
       "Speculative Decoding",
@@ -255,7 +257,8 @@
       "Large Language Models"
     ],
     "sameAs": [
-      "https://github.com/takuminoguchi2004"
+      "https://github.com/takuminoguchi2004",
+      "https://riss.ipa.go.jp/r?r=034126"
     ]
   }
   </script>
@@ -278,12 +281,23 @@
 
       <div class="affiliation">
         慶應義塾大学 理工学部 情報工学科 B4<br>
-        杉浦孔明研究室 (Sugiura Lab. / smilab)<br>
+
+        <a
+          href="https://smilab.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          杉浦孔明研究室 (Sugiura Lab. / smilab)
+        </a>
+        <br>
+
         2027年4月 慶應義塾大学大学院 理工学研究科 進学予定
       </div>
 
       <div class="links">
-        <a href="mailto:contact@takumi-noguchi.dev">contact@takumi-noguchi.dev</a>
+        <a href="mailto:contact@takumi-noguchi.dev">
+          contact@takumi-noguchi.dev
+        </a>
 
         <a
           href="https://github.com/takuminoguchi2004"
@@ -383,7 +397,8 @@
         </li>
 
         <li>
-          情報処理安全確保支援士 — 令和7年度 秋期 登録番号 第034126号
+          情報処理安全確保支援士 — 令和7年度 秋期
+          （登録番号 第034126号）
           [
           <a
             href="https://riss.ipa.go.jp/r?r=034126"
@@ -404,8 +419,14 @@
         </li>
 
         <li>
-          CG-ARTS CGエンジニア検定 エキスパート
-          （文部科学大臣賞）
+          CG-ARTS CGエンジニア検定 エキスパート —
+          <a
+            href="https://www.cgarts.or.jp/award_interview/2025_z_ce_e/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            文部科学大臣賞
+          </a>
         </li>
       </ul>
     </section>
