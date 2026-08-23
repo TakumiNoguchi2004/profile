@@ -6,31 +6,75 @@
 
   <title>Takumi Noguchi | 野口 拓海</title>
 
+  <meta
+    name="description"
+    content="野口拓海 (Takumi Noguchi) - 慶應義塾大学 理工学部 情報工学科。LLM-as-a-Judge、Speculative Decodingを研究しています。"
+  >
+
+  <link rel="canonical" href="https://takumi-noguchi.dev/">
+  <link rel="icon" href="images/usagi_icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Takumi Noguchi | 野口 拓海">
+  <meta
+    property="og:description"
+    content="慶應義塾大学 理工学部 情報工学科。LLM-as-a-Judge、Speculative Decodingを研究しています。"
+  >
+  <meta property="og:url" content="https://takumi-noguchi.dev/">
+  <meta
+    property="og:image"
+    content="https://takumi-noguchi.dev/images/usagi_icon.png"
+  >
+
   <style>
+    :root {
+      --text: #222;
+      --subtext: #666;
+      --border: #ddd;
+      --link: #2468b4;
+      --background: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      max-width: 760px;
+      max-width: 780px;
       margin: 60px auto;
       padding: 0 24px;
+
       font-family:
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
         "Noto Sans JP",
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
         sans-serif;
-      line-height: 1.7;
-      color: #222;
+
+      line-height: 1.75;
+      color: var(--text);
+      background: var(--background);
     }
 
     header {
       display: flex;
       align-items: center;
-      gap: 24px;
-      margin-bottom: 40px;
+      gap: 28px;
+      margin-bottom: 44px;
     }
 
     .profile-icon {
       width: 120px;
       height: 120px;
+      flex-shrink: 0;
+
       object-fit: contain;
       border-radius: 20px;
     }
@@ -38,58 +82,183 @@
     h1 {
       margin: 0;
       font-size: 2rem;
+      line-height: 1.3;
     }
 
     h1 span {
       display: block;
+      margin-top: 3px;
+
       font-size: 1.1rem;
       font-weight: normal;
-      color: #666;
+      color: var(--subtext);
     }
 
     h2 {
-      margin-top: 36px;
-      border-bottom: 1px solid #ddd;
+      margin-top: 40px;
+      margin-bottom: 18px;
+
       padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+
       font-size: 1.25rem;
+    }
+
+    p {
+      margin: 10px 0;
     }
 
     ul {
       padding-left: 1.4rem;
     }
 
+    li {
+      margin-bottom: 5px;
+    }
+
     a {
-      color: #2468b4;
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     .affiliation {
-      margin-top: 10px;
+      margin-top: 12px;
     }
 
-    footer {
-      margin-top: 48px;
-      padding-top: 16px;
-      border-top: 1px solid #ddd;
-      color: #666;
-      font-size: 0.9rem;
+    .links {
+      margin-top: 12px;
+    }
+
+    .links a {
+      margin-right: 12px;
     }
 
     .news-list {
       list-style: none;
       padding-left: 0;
     }
-    
+
     .news-list li {
+      display: flex;
+      gap: 14px;
       margin-bottom: 8px;
     }
-    
+
     .news-list time {
-      display: inline-block;
-      width: 110px;
-      color: #666;
+      min-width: 100px;
+      color: var(--subtext);
       font-variant-numeric: tabular-nums;
     }
+
+    .publication {
+      margin-bottom: 24px;
+    }
+
+    .publication-title {
+      font-weight: 600;
+    }
+
+    .authors {
+      margin-top: 3px;
+    }
+
+    .venue {
+      color: var(--subtext);
+    }
+
+    .me {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .opportunity-box {
+      padding: 16px 20px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .opportunity-box p:first-child {
+      margin-top: 0;
+    }
+
+    .opportunity-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      margin-top: 52px;
+      padding-top: 18px;
+
+      border-top: 1px solid var(--border);
+
+      color: var(--subtext);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        margin-top: 36px;
+      }
+
+      header {
+        align-items: flex-start;
+        gap: 18px;
+      }
+
+      .profile-icon {
+        width: 90px;
+        height: 90px;
+      }
+
+      h1 {
+        font-size: 1.65rem;
+      }
+
+      h1 span {
+        font-size: 1rem;
+      }
+
+      .news-list li {
+        display: block;
+        margin-bottom: 14px;
+      }
+
+      .news-list time {
+        display: block;
+        margin-bottom: 2px;
+      }
+    }
   </style>
+
+  <!-- Structured data for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Takumi Noguchi",
+    "alternateName": "野口 拓海",
+    "url": "https://takumi-noguchi.dev/",
+    "image": "https://takumi-noguchi.dev/images/usagi_icon.png",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Keio University"
+    },
+    "knowsAbout": [
+      "LLM-as-a-Judge",
+      "Speculative Decoding",
+      "Artificial Intelligence",
+      "Large Language Models"
+    ],
+    "sameAs": [
+      "https://github.com/takuminoguchi2004"
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -97,7 +266,7 @@
   <header>
     <img
       src="images/usagi_icon.png"
-      alt="Profile icon"
+      alt="Takumi Noguchi profile icon"
       class="profile-icon"
     >
 
@@ -112,95 +281,162 @@
         杉浦孔明研究室 (Sugiura Lab. / smilab)
       </div>
 
-      <p>
-        <a href="mailto:contact@takumi-noguchi.dev">
-          contact@takumi-noguchi.dev
-        </a>
-      </p>
-    </div>
-  </header>
+      <div class="links">
+        <a href="mailto:contact@takumi-noguchi.dev">Email</a>
 
-  <section>
-    <h2>News</h2>
-  
-    <ul class="news-list">
-      <li>
-        <time datetime="2026-08-22">2026.08.22</time>
-        JISTA定例会に初参加しました。
-      </li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Research</h2>
-
-    <ul>
-      <li>LLM-as-a-Judge</li>
-      <li>Speculative Decoding</li>
-    </ul>
-  </section>
-
-
-  <section>
-    <h2>Publications & Presentations</h2>
-  
-    <p>
-      <strong>
-        Speculative Decoding に基づく高速な画像キャプション向け自動評価尺度
-      </strong><br>
-      <u>野口 拓海</u>, 和田 唯我, 小山 修生, 杉浦 孔明<br>
-      MIRU 2026, ポスター発表
-    </p>
-  </section>
-
-
-  <section>
-    <h2>Materials</h2>
-
-    <ul>
-      <li>
         <a
-          href="https://speakerdeck.com/keio_smilab/journal-club-specvlm-enhancing-speculative-decoding-of-video-llms-via-verifier-guided-token-pruning"
+          href="https://github.com/takuminoguchi2004"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Journal Club: SpecVLM
+          GitHub
         </a>
-      </li>
-    </ul>
-  </section>
+      </div>
+    </div>
+  </header>
 
 
-  <section>
-    <h2>Qualifications & Awards</h2>
+  <main>
 
-    <ul>
-      <li>応用情報技術者試験 — 令和6年度 秋期</li>
-      <li>ITストラテジスト試験 — 令和7年度 春期</li>
-      <li>情報処理安全確保支援士 — 令和7年度 秋期</li>
-      <li>日商簿記検定 3級</li>
-      <li>TOEIC Listening & Reading — 850</li>
-      <li>
-        CG-ARTS CGエンジニア検定 エキスパート
-        （文部科学大臣賞）
-      </li>
-    </ul>
-  </section>
+    <section>
+      <h2>News</h2>
 
-  <section>
-    <h2>Opportunities</h2>
-  
-    <p>
-      AI・LLMなどの専門性を活かせる学生向けの
-      part-time opportunityを探しています。
-    </p>
-  
-    <ul>
-      <li>稼働: 週1〜2日程度</li>
-      <li>地域: 東京・神奈川</li>
-      <li>関心領域: AI / LLM / Security</li>
-    </ul>
-  </section>
+      <ul class="news-list">
+        <li>
+          <time datetime="2026-08-22">2026.08.22</time>
+          <span>JISTA定例会に初参加しました。</span>
+        </li>
+
+        <li>
+          <time datetime="2026-08-05">2026.08.05</time>
+          <span>MIRU 2026でポスター発表を行いました。</span>
+        </li>
+      </ul>
+    </section>
+
+
+    <section>
+      <h2>Research</h2>
+
+      <p>
+        AI・LLMを中心に研究しています。
+      </p>
+
+      <ul>
+        <li>LLM-as-a-Judge</li>
+        <li>Speculative Decoding</li>
+      </ul>
+    </section>
+
+
+    <section>
+      <h2>Publications &amp; Presentations</h2>
+
+      <div class="publication">
+        <div class="publication-title">
+          Speculative Decoding に基づく高速な画像キャプション向け自動評価尺度
+        </div>
+
+        <div class="authors">
+          <span class="me">野口 拓海</span>,
+          和田 唯我,
+          小山 修生,
+          杉浦 孔明
+        </div>
+
+        <div class="venue">
+          MIRU 2026, ポスター発表
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <h2>Materials</h2>
+
+      <ul>
+        <li>
+          <a
+            href="https://speakerdeck.com/keio_smilab/journal-club-specvlm-enhancing-speculative-decoding-of-video-llms-via-verifier-guided-token-pruning"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Journal Club: SpecVLM — Enhancing Speculative Decoding of
+            Video LLMs via Verifier-Guided Token Pruning
+          </a>
+        </li>
+      </ul>
+    </section>
+
+
+    <section>
+      <h2>Qualifications &amp; Awards</h2>
+
+      <ul>
+        <li>
+          応用情報技術者試験 — 令和6年度 秋期
+        </li>
+
+        <li>
+          ITストラテジスト試験 — 令和7年度 春期
+        </li>
+
+        <li>
+          情報処理安全確保支援士 — 登録番号 第034126号
+          [
+          <a
+            href="https://riss.ipa.go.jp/r?r=034126"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            IPA登録情報
+          </a>
+          ]
+        </li>
+
+        <li>
+          日商簿記検定 3級
+        </li>
+
+        <li>
+          TOEIC Listening &amp; Reading — 850
+        </li>
+
+        <li>
+          CG-ARTS CGエンジニア検定 エキスパート
+          （文部科学大臣賞）
+        </li>
+      </ul>
+    </section>
+
+
+    <section>
+      <h2>Opportunities</h2>
+
+      <div class="opportunity-box">
+        <p>
+          AI・LLM・Securityなどの専門性を活かせる
+          学生向けのpart-time opportunityを探しています。
+        </p>
+
+        <ul>
+          <li>稼働: 週1〜2日程度</li>
+          <li>地域: 東京・神奈川</li>
+          <li>関心領域: AI / LLM / Security</li>
+        </ul>
+
+        <p>
+          ご関心がありましたら、
+          <a href="mailto:contact@takumi-noguchi.dev">
+            contact@takumi-noguchi.dev
+          </a>
+          までご連絡ください。
+        </p>
+      </div>
+    </section>
+
+  </main>
+
 
   <footer>
     © 2026 Takumi Noguchi
